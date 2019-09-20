@@ -7,7 +7,7 @@ public class TestPunt2D {
 
     public static void main(String[] args) {
         
-        double x1,y1,x2,y2,distx,disty,distp;
+        double x1,y1,x2,y2;
         Punt2D punt1 , punt2;
 
         Scanner scanner = new Scanner(System.in);
@@ -31,6 +31,8 @@ public class TestPunt2D {
         System.out.println("La distancia X entre los puntos es: "+punt1.DistanciaX(punt2));
         System.out.println("La distancia Y entre los puntos es: "+punt1.DistanciaY(punt2));
         System.out.println("El modulo de la distancia entre los puntos es: "+punt1.Distanciapunt(punt1, punt2));
+
+        scanner.close();
 
     }
 }
