@@ -2,12 +2,12 @@ public class Tesoro{
     
     public String Descripcion;
     public int Altura;
-    public float Valor;
-    public bool esValioso;
+    public double Valor;
+    public Boolean esValioso;
 
     public static int  Limite_valor = 150;
     
-    public Tesoro(String D,int A, float V) {
+    public Tesoro(String D,int A, Double V) {
         Descripcion = D;
         Altura = A;
         Valor = V;                
@@ -19,8 +19,7 @@ public class Tesoro{
     }
 
     public boolean esValioso(){
-        if (Valor >= Limite_valor) this.esValioso = true;
-        else this.esValioso = false;
+        return Valor>=Limite_valor;
     }
 
 }
