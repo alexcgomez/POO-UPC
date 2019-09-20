@@ -33,7 +33,7 @@ public class Punt2D {
     }
     public double Distanciapunt(Punt2D Punt1 , Punt2D Punt2){
         double Distancia;
-        Distancia = Math.abs(Math.sqrt(Math.pow(Punt1.DistanciaX(Punt2), 2)+Math.pow(Punt1.DistanciaY(Punt2), 2)));
+        Distancia = Math.sqrt(Math.pow(Punt1.DistanciaX(Punt2), 2)+Math.pow(Punt1.DistanciaY(Punt2), 2));
         return Distancia;
     }
 

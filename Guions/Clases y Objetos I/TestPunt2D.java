@@ -33,6 +33,7 @@ public class TestPunt2D {
         System.out.println("El modulo de la distancia entre los puntos es: "+punt1.Distanciapunt(punt1, punt2));
 
         scanner.close();
+        
 
     }
 }
