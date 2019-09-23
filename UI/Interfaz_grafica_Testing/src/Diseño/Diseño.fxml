@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="965.0" stylesheets="@../css/Estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+    <left>
+      <VBox prefHeight="658.0" prefWidth="299.0" style="-fx-background-color: #353535;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="WHITE" height="92.16" radius="43.3575" spread="0.18" width="83.27" />
+         </effect>
+         <children>
+            <JFXButton fx:id="btMisFunciones" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel1" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="MIS FUNCIONES" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btTesoro1" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel2" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="TESORO - CO I" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btTesoro2" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel3" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="TESORO - CO II" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btPunt2D1" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel4" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="PUNT 2D - CO I" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="PUNT 2D - CO II" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="DATA - CO I" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="DATA - CO II" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="86.23" radius="26.3075" spread="0.27" />
+               </effect>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <AnchorPane prefHeight="53.0" prefWidth="960.0" style="-fx-background-color: #9a9a9a;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="button1" layoutX="902.0" layoutY="1.0" mnemonicParsing="false" onAction="#cerrarVentana" prefHeight="51.0" prefWidth="49.0">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/Alex/OneDrive/UPC%20-%20INGENIERIA/Alex/4º/Introduccion%20a%20la%20POO/POO-UPC/UI/Interfaz_grafica_Testing/src/images/close.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <Label layoutX="91.0" layoutY="9.0" prefHeight="38.0" prefWidth="630.0" text="Introducció a la programació orientada a objectes -UPC" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/upc.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="pane2" prefHeight="553.0" prefWidth="672.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="306.0" layoutY="266.0" text="Panel 2" />
+               </children></Pane>
+            <Pane fx:id="pane3" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="320.0" layoutY="212.0" text="Panel 3" />
+               </children></Pane>
+            <Pane fx:id="pane4" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="320.0" layoutY="266.0" text="Panel 4" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane1" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;">
+               <children>
+                  <JFXButton fx:id="btCalcular" layoutX="84.0" layoutY="177.0" onAction="#SumarEnteros" text="Calcular" />
+                  <JFXTextField fx:id="Entero1" alignment="CENTER_RIGHT" focusColor="WHITE" layoutX="195.0" layoutY="88.0" prefHeight="25.0" prefWidth="93.0" promptText="Entero 1" />
+                  <Label layoutX="194.0" layoutY="41.0" text="Sumar Enteros" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="ResultadoSum" alignment="CENTER_RIGHT" editable="false" focusColor="WHITE" layoutX="153.0" layoutY="177.0" promptText="Resultado" />
+                  <JFXTextField fx:id="Entero2" alignment="CENTER_RIGHT" focusColor="WHITE" layoutX="195.0" layoutY="119.0" prefHeight="25.0" prefWidth="93.0" promptText="Entero 2" />
+                  <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="142.0" layoutY="32.0">
+                     <image>
+                        <Image url="@../../../../../../../../../../AppData/Local/Temp/icons8_plus_math_64px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
