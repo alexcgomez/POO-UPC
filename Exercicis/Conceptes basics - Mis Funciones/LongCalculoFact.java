@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * longCalculoFact
  */
-public class IntCalculoFact {
+public class LongCalculoFact {
 
     public static void main(String[] args) {
         
@@ -19,6 +19,7 @@ public class IntCalculoFact {
             fact = fact*i;
             
             System.out.println(fact);
+            
             
         }
     }
