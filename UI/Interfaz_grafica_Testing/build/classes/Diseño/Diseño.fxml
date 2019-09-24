@@ -22,38 +22,20 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btTesoro1" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel2" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="TESORO - CO I" textFill="WHITE">
+            <JFXButton fx:id="btTesoro1" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel2" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="TESORO" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btTesoro2" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel3" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="TESORO - CO II" textFill="WHITE">
+            <JFXButton fx:id="btPunt2D" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#PanelPunt2D" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="PUNT 2D" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btPunt2D1" alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Panel4" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="PUNT 2D - CO I" textFill="WHITE">
+            <JFXButton alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="DATA" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
-            </JFXButton>
-            <JFXButton alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="PUNT 2D - CO II" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </JFXButton>
-            <JFXButton alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="DATA - CO I" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </JFXButton>
-            <JFXButton alignment="CENTER" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" prefHeight="78.0" prefWidth="344.0" ripplerFill="BLACK" text="DATA - CO II" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <effect>
-                  <DropShadow height="86.23" radius="26.3075" spread="0.27" />
-               </effect>
             </JFXButton>
          </children>
       </VBox>
@@ -86,26 +68,102 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane fx:id="pane2" prefHeight="553.0" prefWidth="672.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Label layoutX="306.0" layoutY="266.0" text="Panel 2" />
-               </children></Pane>
-            <Pane fx:id="pane3" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Pane fx:id="pane4" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Label layoutX="320.0" layoutY="212.0" text="Panel 3" />
                </children></Pane>
-            <Pane fx:id="pane4" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Pane fx:id="pane3" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Label layoutX="320.0" layoutY="266.0" text="Panel 4" />
+                  <JFXTextField fx:id="CoorXp1" layoutX="71.0" layoutY="110.0" promptText="Coordenada X" />
+                  <JFXTextField fx:id="CoorYp1" layoutX="71.0" layoutY="153.0" promptText="Coordenada Y" />
+                  <JFXTextField fx:id="CoorXp2" layoutX="372.0" layoutY="110.0" promptText="Coordenada X" />
+                  <JFXTextField fx:id="CoorYp2" layoutX="372.0" layoutY="153.0" promptText="Coordenada Y" />
+                  <JFXTextField fx:id="distX" editable="false" layoutX="66.0" layoutY="245.0" promptText="Distancia X" />
+                  <JFXTextField fx:id="distY" editable="false" layoutX="66.0" layoutY="297.0" promptText="Distancia Y" />
+                  <JFXTextField fx:id="distMod" editable="false" layoutX="367.0" layoutY="285.0" promptText="Distancia modul" />
+                  <Label layoutX="84.0" layoutY="62.0" text="Punt 1" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="372.0" layoutY="62.0" text="Punt 2" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="79.0" layoutY="214.0" text="Distància X,Y" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="367.0" layoutY="214.0" text="Distància en módul" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btCalcDist" layoutX="214.0" layoutY="376.0" onAction="#CalculaDistancias" prefHeight="53.0" prefWidth="166.0" style="-fx-background-color: gold;" text="Calcula la distància!">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pane2" prefHeight="553.0" prefWidth="672.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="67.0" fitWidth="76.0" layoutX="57.0" layoutY="38.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tesoro.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="57.0" layoutY="321.0">
+                     <image>
+                        <Image url="@../images/diam.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="57.0" layoutY="234.0">
+                     <image>
+                        <Image url="@../images/map.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="36.0" layoutX="63.0" layoutY="153.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/des.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="TesDes2" editable="false" focusColor="#f8f8f8" layoutX="428.0" layoutY="159.0" />
+                  <JFXTextField fx:id="TesAlt2" editable="false" focusColor="#f8f8f8" layoutX="428.0" layoutY="246.0" />
+                  <JFXTextField fx:id="TesVal2" editable="false" focusColor="#f8f8f8" layoutX="428.0" layoutY="332.0" />
+                  <Label layoutX="153.0" layoutY="54.0" text="Tesoro" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="53.0" fitWidth="49.0" layoutX="376.0" layoutY="57.0">
+                     <image>
+                        <Image url="@../images/aten.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="VerTes" layoutX="412.0" layoutY="387.0" onAction="#VerTesoro" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: lightBlue;" text="Ver tesoro actual">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="ActTes" layoutX="130.0" layoutY="387.0" onAction="#ActualizarTesoro" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: gold;" text="Actualizar Tesoro">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="428.0" layoutY="70.0" text="El limite valor es: 120" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Label>
+                  <TextField fx:id="TesDes1" layoutX="131.0" layoutY="164.0" promptText="Introduce Descripción" />
+                  <TextField fx:id="TesAlt1" layoutX="131.0" layoutY="246.0" promptText="Introduce Altura" />
+                  <TextField fx:id="TesVal1" layoutX="131.0" layoutY="332.0" promptText="Introduce Valor" />
                </children>
             </Pane>
             <Pane fx:id="pane1" prefHeight="549.0" prefWidth="668.0" style="-fx-background-color: grey;">
                <children>
-                  <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="152.0" layoutY="42.0">
-                     <image>
-                        <Image url="@../../../../../../../../../../AppData/Local/Temp/icons8_plus_math_64px.png" />
-                     </image>
-                  </ImageView>
                   <JFXTextField fx:id="Entero2" alignment="CENTER_RIGHT" focusColor="WHITE" layoutX="205.0" layoutY="129.0" prefHeight="25.0" prefWidth="93.0" promptText="Entero 2" />
                   <JFXTextField fx:id="ResultadoSum" alignment="CENTER_RIGHT" editable="false" focusColor="WHITE" layoutX="163.0" layoutY="187.0" promptText="Resultado" />
                   <Label layoutX="204.0" layoutY="51.0" text="Sumar Enteros" textFill="WHITE">
@@ -123,11 +181,6 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="41.0" fitWidth="42.0" layoutX="372.0" layoutY="41.0" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../../../AppData/Local/Temp/icons8_2_circle_c_100px.png" />
-                     </image>
-                  </ImageView>
                   <Label layoutX="205.0" layoutY="282.0" text="Máximo de 3" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
@@ -136,11 +189,6 @@
                   <JFXTextField fx:id="Maxim3" alignment="CENTER_RIGHT" editable="false" focusColor="WHITE" layoutX="184.0" layoutY="451.0" onMouseClicked="#Maximo3" prefHeight="25.0" prefWidth="111.0" promptText="Resultado" />
                   <JFXTextField fx:id="Max32" alignment="CENTER_RIGHT" focusColor="WHITE" layoutX="202.0" layoutY="360.0" prefHeight="25.0" prefWidth="93.0" promptText="Entero 2" />
                   <JFXTextField fx:id="Max31" alignment="CENTER_RIGHT" focusColor="WHITE" layoutX="202.0" layoutY="323.0" prefHeight="25.0" prefWidth="93.0" promptText="Entero 1" />
-                  <ImageView fitHeight="44.0" fitWidth="41.0" layoutX="152.0" layoutY="272.0" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../../../AppData/Local/Temp/icons8_3_circle_c_100px.png" />
-                     </image>
-                  </ImageView>
                   <JFXTextField fx:id="Max33" alignment="CENTER_RIGHT" focusColor="WHITE" layoutX="202.0" layoutY="401.0" prefHeight="25.0" prefWidth="93.0" promptText="Entero 2" />
                   <JFXTextField fx:id="fac1" alignment="CENTER_RIGHT" focusColor="WHITE" layoutX="413.0" layoutY="323.0" prefHeight="25.0" prefWidth="93.0" promptText="Entero 1" />
                   <Label layoutX="450.0" layoutY="282.0" text="Factorial" textFill="WHITE">
@@ -148,12 +196,27 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="29.0" fitWidth="39.0" layoutX="399.0" layoutY="278.0" preserveRatio="true">
+                  <JFXTextField fx:id="Factorial" alignment="CENTER_RIGHT" editable="false" focusColor="WHITE" layoutX="395.0" layoutY="360.0" onMouseClicked="#calcfact" prefHeight="25.0" prefWidth="111.0" promptText="Resultado" />
+                  <ImageView fitHeight="60.0" fitWidth="57.0" layoutX="349.0" layoutY="33.0" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../../../AppData/Local/Temp/icons8_exclamation_mark_50px.png" />
+                        <Image url="@../images/2.png" />
                      </image>
                   </ImageView>
-                  <JFXTextField fx:id="Factorial" alignment="CENTER_RIGHT" editable="false" focusColor="WHITE" layoutX="395.0" layoutY="360.0" onMouseClicked="#calcfact" prefHeight="25.0" prefWidth="111.0" promptText="Resultado" />
+                  <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="115.0" layoutY="266.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="378.0" layoutY="278.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/fac.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="114.0" layoutY="34.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/sum.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </children>

@@ -1,3 +1,5 @@
+package Clases;
+
 public class Tesoro2{
     
     private String Descripcion;

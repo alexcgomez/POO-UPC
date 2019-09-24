@@ -1,4 +1,7 @@
-/**
+package Clases;
+
+
+ /**
  * Punt2D
  */
 public class Punt2D {
