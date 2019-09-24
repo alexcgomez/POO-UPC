@@ -46,6 +46,24 @@ public class Controller implements Initializable {
     private JFXTextField Entero2;
     @FXML
     private JFXTextField ResultadoSum;
+    @FXML
+    private JFXTextField Max21;
+    @FXML
+    private JFXTextField Max22;
+    @FXML
+    private JFXTextField Maxim2;
+    @FXML
+    private JFXTextField Maxim3;
+    @FXML
+    private JFXTextField Max32;
+    @FXML
+    private JFXTextField Max31;
+    @FXML
+    private JFXTextField Max33;
+    @FXML
+    private JFXTextField fac1;
+    @FXML
+    private JFXTextField Factorial;
 
     
   
@@ -89,6 +107,30 @@ public class Controller implements Initializable {
         Sumar suma = new Sumar(Integer.parseInt(Entero1.getText()),Integer.parseInt(Entero2.getText()));
         ResultadoSum.setText(Integer.toString(suma.sumar()));
     }
+
+    @FXML
+    private void Maximo2(MouseEvent event) {
+        
+        Max2 maximo2 = new Max2(Integer.parseInt(Max21.getText()),Integer.parseInt(Max22.getText()));
+        Maxim2.setText(Integer.toString(maximo2.maxim2()));
+        
+    }
+
+    @FXML
+    private void Maximo3(MouseEvent event) {
+        
+          Max3 maximo3 = new Max3(Integer.parseInt(Max31.getText()),Integer.parseInt(Max32.getText()),Integer.parseInt(Max33.getText()));
+          Maxim3.setText(Integer.toString(maximo3.maxim3()));
+    }
+
+    @FXML
+    private void calcfact(MouseEvent event) {
+        
+        LongCalculoFact fact1 = new LongCalculoFact(Integer.parseInt(fac1.getText()));
+        Factorial.setText(Long.toString(fact1.CalcFact()));
+    }
+    
+    
     
     
 
