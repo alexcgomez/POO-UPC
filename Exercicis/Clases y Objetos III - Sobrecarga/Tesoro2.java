@@ -56,11 +56,11 @@ public class Tesoro2{
 
     }
 	
-	public boolean esMasValioso(Tesoro2 t){
+	public boolean esMasValioso(Tesoro2 t){             // Metodo sobrecargado
 		return this.Valor>t.getValor();
 	}
 	
-	public boolean esMasValioso(Double valor){
+	public boolean esMasValioso(Double valor){          // Metodo sobrecargado
 		return this.Valor>valor;
 	}
 
