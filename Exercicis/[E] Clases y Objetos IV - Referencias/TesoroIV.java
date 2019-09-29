@@ -1,4 +1,3 @@
-
 /**
  * Joc_Tresor 3: Implementació de modificacions Sobrecàrrega de constructors i
  * métodes
@@ -29,7 +28,7 @@ public class TesoroIV {
         setDescripcion(D);
         setAltura(A);
         setValor(V);
-        setPunt(punt);
+        Punt = new Punt2D(punt);
     }
 
     // Metodos de clase
@@ -75,7 +74,7 @@ public class TesoroIV {
     }
 
     public void setPunt(Punt2D punt) {
-        Punt = punt;
+        Punt = new Punt2D(punt);
     }
 
     public void ActuTesoro(String D, double V) {
@@ -90,20 +89,20 @@ public class TesoroIV {
 
     public void showTesoro() {
 
-        if (nombre = null) {
+        if (nombre == null) {
             System.out.println("Tesoro");
             System.out.println("            Descripcion: " + getDescripcion());
             System.out.println("            Altura: " + getAltura());
             System.out.println("            Valor: " + getValor());
             System.out.println("            Coordenadas: " + getPunt().toString());
         }
-
-        System.out.println("Tesoro" + nombre);
-        System.out.println("            Descripcion: " + t1.getDescripcion());
-        System.out.println("            Altura: " + t1.getAltura());
-        System.out.println("            Valor: " + t1.getValor());
-        System.out.println("            Coordenadas: " + t1.getPunt().toString());
-
+            else{
+                System.out.println("Tesoro" + nombre);
+                System.out.println("            Descripcion: " + getDescripcion());
+                System.out.println("            Altura: " + getAltura());
+                System.out.println("            Valor: " + getValor());
+                System.out.println("            Coordenadas: " + getPunt().toString());
+            }        
     }
 
     // Metodos sobrecargados
