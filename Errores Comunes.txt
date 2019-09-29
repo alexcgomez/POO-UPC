@@ -1,0 +1,35 @@
+                        MENSAJE DEL ERROR                       |                       SOLUCION
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exception in thread "main" java.lang.NullPointerException       |   Los objetos no estan construidos, se tienen que construir los objetos de la tabla.
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                | 
+                                                                |  
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |   
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |   
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                |
+                                                                
