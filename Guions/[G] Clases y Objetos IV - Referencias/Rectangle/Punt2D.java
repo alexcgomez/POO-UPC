@@ -1,6 +1,8 @@
 /**
  * Punt2D
  */
+import java.util.Scanner;
+
 public class Punt2D {
 
     private double x_cor,y_cor;
@@ -69,6 +71,15 @@ public class Punt2D {
         dist_y = distanciaY(y);
         Distancia = Math.sqrt(Math.pow(dist_x, 2)+Math.pow(dist_y, 2));
         return Distancia;
+    }
+
+    public void insertCor(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduce la coordenada X: ");
+        setX_Cor(scan.nextDouble());
+        System.out.println("Introduce la coordenada Y: ");
+        setY_Cor(scan.nextDouble());
+        scan.close();
     }
 
 }
