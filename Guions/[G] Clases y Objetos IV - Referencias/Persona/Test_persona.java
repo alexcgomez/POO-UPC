@@ -15,7 +15,7 @@ public class Test_persona {
         
 
         persona1 = new Persona(dni,nombre,edad,Fecha_nac);
-
+ 
 
     
         System.out.println("DATOS DE LA PERSONA");

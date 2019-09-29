@@ -15,8 +15,8 @@ public class TesoroVI{
     private
     
     // Constructores
-	public Tesoro2(){};
-    public Tesoro2(String D,int A, Double V) {
+	public TesoroIV(){};
+    public TesoroVI(String D,int A, Double V) {
         this.setDescripcion(D);
         this.setAltura(A);
         this.setValor(V); 
