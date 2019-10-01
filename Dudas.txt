@@ -1,0 +1,5 @@
+Tablas
+-------------------------
+- Se puede inicializar una array dentro de un constructor?
+- Se puede copiar una array entera dentro de otra, directamente?
+        ej. this.rectangles = rectangles // ambos son arrays
