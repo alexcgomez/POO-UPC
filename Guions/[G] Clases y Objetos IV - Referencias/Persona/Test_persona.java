@@ -22,7 +22,7 @@ public class Test_persona {
         System.out.println("--------------------");
         System.out.println("Nombre: " + persona1.getNombre());
         System.out.println("DNI: " + persona1.getDni());
-        System.out.println("Fecha de nacimiento: " + persona1.getData_neix());
+        //System.out.println("Fecha de nacimiento: " + persona1.getData_neix());
         System.out.println("Edad: " + persona1.getEdad());
 
 

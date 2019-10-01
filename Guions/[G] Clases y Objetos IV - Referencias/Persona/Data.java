@@ -42,7 +42,7 @@ public class Data {
         return any;
     }
 
-    public String getData(){
+    public String toString(){
         String data;
         data = getDia() + " / " + getMes() + " / " + getAny();
         return data;

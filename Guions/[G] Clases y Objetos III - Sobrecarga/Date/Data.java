@@ -19,7 +19,7 @@ public class Data {
     }
 
     public void setDia(int dia){
-        this.dia = dia;
+        if(dia >= 1 && dia <= 31) this.dia = dia;
     }
     
     public void setMes(int mes){

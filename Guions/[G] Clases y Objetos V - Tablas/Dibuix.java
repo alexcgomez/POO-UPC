@@ -5,17 +5,19 @@ public class Dibuix {
 
     private int Color;
     private Rectangle2D rectangles[];
-    private int max_rec;
+    private int max_rec = 100;
 
     public Dibuix(Rectangle2D rectangles[]){
 
         this.rectangles = new Rectangle2D[max_rec];
 
-        if (rectangles.length <= 100){
-            this.rectangles = rectangles;
+        if (rectangles.length <= max_rec){
+            for (int i = 0; i < rectangles.length; i++) {
+                this.rectangles[i] = new Rectangle2D(rectangle[i]);
+            }
         }
-        else for (int i = 0; i < 100; i++) {
-            this.rectangles[i] = rectangles[i];
+        else for (int i = 0; i < max_rec; i++) {
+            this.rectangles[i] = new Rectangle2D(rectangles[i]);
         }
     }
 

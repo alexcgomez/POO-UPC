@@ -18,7 +18,9 @@ public class Test_Dibuix {
         System.out.println("Introdueix el numero de rectangles que tindrá el teu dibuix: ");
         num_rect = scan.nextInt();
         rectangles = new Rectangle2D[num_rect];
-        
+        for (int i = 0; i < num_rect; i++) {
+            
+        }
 
 
 

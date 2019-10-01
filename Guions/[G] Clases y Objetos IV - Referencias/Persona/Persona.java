@@ -3,10 +3,14 @@
  */
 public class Persona {
 
+	// Atributos
+
 	private int dni, edad;
 	private String nombre;
     private static int mayoria_edad = 18;
     private Data data_naixement;
+
+	// Constructores
 
     public Persona(int dni,  String nombre, int edad, Data data1) {
 		this(dni,nombre, edad);
@@ -26,7 +30,9 @@ public class Persona {
 	public Persona(){
         
     }
-		
+	
+	// Metodos de clase
+
 	public int diferenciaEdad(int edad){
 		return Math.abs(this.edad-edad);
 	}
@@ -68,7 +74,8 @@ public class Persona {
 	}
 
 	public String getData_neix(){
-		return data_naixement.getData();
+		Data d;
+		return d= new Data(data_naixement);
 	}
 
 	public void setEdad(int edad) {
