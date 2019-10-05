@@ -1,35 +1,38 @@
-/**
- * Punt2D
- */
+package Dibuix;
+
 import java.util.Scanner;
 
 public class Punt2D {
 
-    private double x_cor,y_cor;
+    // ATRIBUTOS
+    private double x_cor, y_cor;
 
 
-    // Constructor
-    public Punt2D(double x , double y){
+    // CONSTRUCTORES
+    public Punt2D(double x , double y){ 
         setX_Cor(x);
         setY_Cor(y);
     }
-    // Constructor de copia
     public Punt2D(Punt2D P){
-        setX_Cor(P.getX_Cor());
-        setY_Cor(P.getY_Cor());
+        setX_Cor(P.x_cor);
+        setY_Cor(P.y_cor);
     }
-    // Constructor sense parametres
     public Punt2D(){
-        setX_Cor(0);
-        setY_Cor(0);
+        x_cor = 0;
+        y_cor = 0;
     }
 
+    // METODOS DE OBJETO
+
+    // Getters
     public double getX_Cor(){
         return x_cor;
     }
     public double getY_Cor(){
         return y_cor;
     }
+    
+    // Setters
     public void setX_Cor(double x){
         x_cor = x;
     }
@@ -37,34 +40,19 @@ public class Punt2D {
         y_cor = y;
     }
 
-    // Distancia X amb Punt2D per parametre
-    public double distanciaX(Punt2D punt){
-        double distX;
-        distX = x_cor - punt.getX_Cor();
-        return distX;
+    // Metodos
+    public double distanciaX(Punt2D P){
+        return Math.abs(x_cor-P.x_cor);
     }
-
-    // Distancia X amb double per parametre
     public double distanciaX(double x){
-        double distX;
-        distX = x_cor - x;
-        return distX;
+        return Math.abs(x_cor-x);
     }
-
-    // Distancia Y amb Punt2D per parametre
-    public double distanciaY(Punt2D punt){
-        double distY;
-        distY = y_cor - punt.getY_Cor();
-        return distY;
+    public double distanciaY(Punt2D P){
+        return Math.abs(x_cor-P.x_cor);
     }
-
-    // Distancia Y amb double per parametre
     public double distanciaY(double y){
-        double distY;
-        distY = y_cor - y;
-        return distY;
+        return Math.abs(y_cor-y);
     }
-
     public double distanciapunt(double x , double y){
         double Distancia,dist_x,dist_y;
         dist_x = distanciaX(x);
@@ -72,7 +60,6 @@ public class Punt2D {
         Distancia = Math.sqrt(Math.pow(dist_x, 2)+Math.pow(dist_y, 2));
         return Distancia;
     }
-
     public void insertCor(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Introduce la coordenada X: ");

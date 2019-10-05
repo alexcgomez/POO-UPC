@@ -3,3 +3,4 @@ Tablas
 - Se puede inicializar una array dentro de un constructor? SI
 - Se puede copiar una array entera dentro de otra, directamente? SI, pero entonces pasas la referencia, si se modifica fuera, se modifica dentro
         ej. this.rectangles = rectangles // ambos son arrays
+- Porque se utilizan getters en constructores de copia, los atributos de privados no son accesibles desde la propia clase?        

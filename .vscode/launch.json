@@ -4,7 +4,25 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test_Dibuix",
+            "request": "launch",
+            "mainClass": "Test_Dibuix"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestPunt2Dmod",
+            "request": "launch",
+            "mainClass": "TestPunt2Dmod"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestPunt2Dmod",
+            "request": "launch",
+            "mainClass": "TestPunt2Dmod",
+            "projectName": "POO-UPC_550dba95"
+        },
         {
             "type": "java",
             "name": "Debug (Launch) - Current File",
