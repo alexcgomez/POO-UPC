@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "POO-UPC_3b3c3609"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Test_Dibuix",
             "request": "launch",
             "mainClass": "Test_Dibuix"

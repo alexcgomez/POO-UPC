@@ -27,11 +27,13 @@ public class Persona {
 		this.edad = edad;
 	}
 		
-	public Persona(){
-        
-    }
+	public Persona(int dni, String nom){
+		setDni(dni);
+		setNombre(nom);
+		}
+	public Persona(){}
 	
-	// Metodos
+	// Metodos de clase
 
 	public int diferenciaEdad(int edad){
 		return Math.abs(this.edad-edad);
@@ -73,14 +75,17 @@ public class Persona {
 		return edad;
 	}
 
-	public String getData_neix(){
-		Data d;
-		return d= new Data(data_naixement);
+	public Data getData_neix(){
+		return new Data(data_naixement);
 	}
 
 	public void setEdad(int edad) {
 		if (edad>=0 && edad<120){
 			this.edad = edad;
 		}
+	}
+
+	public String toString(){
+		return "DNI: " + getDni() + "\nNombre y apellidos: " + getNombre() + "\n";
 	}
 }
