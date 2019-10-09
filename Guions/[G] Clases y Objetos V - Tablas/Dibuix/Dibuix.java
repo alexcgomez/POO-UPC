@@ -1,5 +1,3 @@
-package Dibuix;
-
 import java.util.ArrayList;
 
 public class Dibuix {

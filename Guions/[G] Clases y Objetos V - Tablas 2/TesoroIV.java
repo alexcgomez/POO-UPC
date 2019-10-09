@@ -115,12 +115,12 @@ public class TesoroIV {
     }
 
     public double distancia(TesoroIV t) {
-        double dist = this.Punt.distanciapunt(t.Punt);
+        //double dist = this.Punt.distanciapunt(t.Punt);
         return dist;
     }
 
     public double distancia(Punt2D p) {
-        double dist = Punt.distanciapunt(p);
+        //double dist = Punt.distanciapunt(p);
         return dist;
     }
 }

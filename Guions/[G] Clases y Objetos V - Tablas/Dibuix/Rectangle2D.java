@@ -1,5 +1,3 @@
-package Dibuix;
-
 public class Rectangle2D {
     
     // ATRIBUTOS

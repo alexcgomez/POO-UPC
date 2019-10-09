@@ -1,5 +1,3 @@
-package Dibuix;
-
 import java.util.Scanner;
 
 public class Punt2D {
