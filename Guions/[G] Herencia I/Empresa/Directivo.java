@@ -23,8 +23,6 @@ public class Directivo extends EmpleadoCom {
     public int nominaMensual(){
         return super.nominaMensual()+CompDir;
     }
-    public String toString(){
-        return super.toString();
-    }
+  
 
 }

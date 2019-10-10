@@ -11,7 +11,7 @@ public class MainP1 {
 		new Directivo(32456782,"Anna","Gomez","Cortes",1500,1200, 2800)};
 		for(Empleado e: empleats) {
 			System.out.println(e);
-			System.out.println("Nomina mensual: " + e.nominaMensual());
+			// System.out.println("Nomina mensual: " + e.nominaMensual());
 			System.out.println();
 		}
 	}

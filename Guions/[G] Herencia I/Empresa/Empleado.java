@@ -24,7 +24,7 @@ public class Empleado extends Persona{
         return Nomina;
     }
     public String toString(){
-        return "DNI: " + super.getDni() + "\n" + "Nombre y Apellidos: " + super.getNombre() + " " + super.getApellido1() + " " + super.getApellido2() + " ";
+        return "DNI: " + super.getDni() + "\n" + "Nombre y Apellidos: " + super.getNombre() + " " + super.getApellido1() + " " + super.getApellido2() + " " + "\nNomina: " + nominaMensual();
     }
     
 }

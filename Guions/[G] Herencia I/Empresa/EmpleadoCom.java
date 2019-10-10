@@ -23,8 +23,5 @@ public class EmpleadoCom extends Empleado{
     public int nominaMensual(){
         return super.nominaMensual()+Complemento;
     }
-    public String toString(){
-        return super.toString();
-    }
-    
+   
 }
