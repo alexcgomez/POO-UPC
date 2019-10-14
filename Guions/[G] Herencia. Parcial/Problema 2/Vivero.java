@@ -15,11 +15,19 @@ public class Vivero {
 		return this.locales[i];
 	}
 
-	public void setLocal(Startup s) {
+	public void setLocal() {
+		
+		locales[0] = new Startup("1", "1", 1, 1, 1, "1");
 		for (int i = 0; i < locales.length; i++) {
-            if(locales[i].getClass()==null) 
+			if(locales[i] == null)
+			System.out.println("Algo: " + i);
+
+			System.out.println("Otra i: " +i );
+		}
+			
+            
         }
-	}
+
 
 	public int getNumLoc() {
 		return this.numLoc;
