@@ -95,9 +95,10 @@ public class Startup {
     }
 
     public double calculoInmobilizado(){
-        return calculoInmobilizadoInmaterial()+calculoInmobilizadoMaterial();
+        return calculoInmobilizadoInmaterial()+calculoInmobilizadoMaterial()+Inversiones;
     }
 
+    //@Override
     public boolean equals(Startup s){
         if(this.CIF == s.getCIF()) return true;
         else return false;
@@ -108,3 +109,5 @@ public class Startup {
         return "Nombre[CIF]: " + Nombre + " [" + CIF + "] \n" + "Capital Social: " + CapSocial + "\nInversores: " + Inversiones + "\nTrabajadores: " + Trabajadores + "\nDescripción: " + Descripcion;
     }
 }
+
+

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestStartup",
+            "request": "launch",
+            "mainClass": "TestStartup",
+            "projectName": "POO-UPC_3b3c3609"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestViverStartups",
             "request": "launch",
             "mainClass": "TestViverStartups",

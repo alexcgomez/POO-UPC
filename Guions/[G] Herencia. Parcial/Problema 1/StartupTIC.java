@@ -3,25 +3,25 @@
  */
 public class StartupTIC extends StartupTecnologica{
 
-    private double Costo= 2300;
+    private static double Costo= 2300;
 
     public StartupTIC(String C, String N, double Cap, double Inv, int T, String Des,int pat, int valor){
         super(C,N,Cap,Inv,T,Des,pat,valor);
     }
 
 
-    public double getCosto() {
-        return this.Costo;
+    public static double getCosto() {
+        return Costo;
     }
 
-    public void setCosto(int Costo) {
-        this.Costo = Costo;
+    public static void setCosto(int C) {
+        Costo = C;
     }
 
     @Override
     public double calculoInmobilizadoMaterial(){
         return Costo;
     }
-
+            
     
 }
