@@ -100,8 +100,16 @@ public class Startup {
 
     //@Override
     public boolean equals(Startup s){
-        if(this.CIF == s.getCIF()) return true;
+        if(this.CIF.equals(s.getCIF())) return true;
         else return false;
+
+        // if(this == s) return true;
+        // if(s == null) return false;
+        // if(this.getCIF() == null){
+
+        // }
+
+
     }
 
     @Override
