@@ -6,49 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - TestStartup",
-            "request": "launch",
-            "mainClass": "TestStartup",
-            "projectName": "POO-UPC_3b3c3609"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - TestViverStartups",
-            "request": "launch",
-            "mainClass": "TestViverStartups",
-            "projectName": "POO-UPC_550dba95"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - TestStartups",
-            "request": "launch",
-            "mainClass": "TestStartups",
-            "projectName": "POO-UPC_550dba95"
-        },
-        {
-            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "POO-UPC_3b3c3609"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Test_Dibuix",
-            "request": "launch",
-            "mainClass": "Test_Dibuix"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - TestPunt2Dmod",
-            "request": "launch",
-            "mainClass": "TestPunt2Dmod"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - TestPunt2Dmod",
-            "request": "launch",
-            "mainClass": "TestPunt2Dmod",
             "projectName": "POO-UPC_550dba95"
         },
         {
