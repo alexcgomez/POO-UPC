@@ -12,7 +12,7 @@ public class Carrito {
 
     public Carrito(){}
 
-    public Carrito(ArrayList<Componente> productos, Date Fecha, Cliente cliente){
+    public Carrito(ArrayList<Componente> Lista_productos, Date Fecha, Cliente cliente){
         setLista_productos(Lista_productos);
         setFecha(Fecha);
         setCliente(cliente);
@@ -23,8 +23,10 @@ public class Carrito {
     }
 
     public void setLista_productos(ArrayList<Componente> Lista_productos) {
-        
+        if(Lista_productos!=null){
         this.Lista_productos = Lista_productos;
+        }
+        
     }
 
     public Date getFecha() {
@@ -48,7 +50,7 @@ public class Carrito {
     }
 
     public boolean eliminarProducto(int Codigo){
-        if(Lista_productos.size()==0) return false;
+        if(Lista_productos.isEmpty()) return false;
         else {
             Lista_productos.remove(Codigo);
             return true;
@@ -58,16 +60,19 @@ public class Carrito {
     @Override
     public String toString(){
         double total=0.0;
-        String texto = "CARRITO DE LA COMPRA\n_________________________\n";
-        if(Lista_productos.size() != 0){
-            for(int i = 0; i < Lista_productos.size(); i++) {
-                texto+=Lista_productos.get(i).toString()+"\n";
-                total+=Lista_productos.get(i).getPVP();
-            }
-            texto+="TOTAL--------------------------------- "+total;
-            return texto;
-        }
-        else return "El carrito esta vacio.";
+        String texto = "CARRITO DE LA COMPRA\n_________________________\n";           
+        
+            if(Lista_productos != null){
+                for(int i = 0; i < Lista_productos.size(); i++) {
+                    texto+=Lista_productos.get(i).toString()+"\n";
+                    total+=Lista_productos.get(i).getPVP();
+                }
+                texto+="TOTAL--------------------------------- "+total;
+                return texto;
+             }
+
+        else return "El carrito esta vacio.";   
+    
     }
 
 
