@@ -43,4 +43,9 @@ public class Fabricante {
     public String toString(){
         return Nombre_Fabricante + " [" + Codigo_Fabricante + "] ";
     }
+
+
+   public String toFile(){
+       return "Fabricante, " + getCodigo_Fabricante() + ", " + getNombre_Fabricante() + ", " + getTelefono_Fabricante(); 
+   }
 }

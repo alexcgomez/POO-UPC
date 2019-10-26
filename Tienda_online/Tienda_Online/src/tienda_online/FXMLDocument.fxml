@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="582.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="tienda_online.FXMLDocumentController">
+    <children>
+      <TabPane layoutX="81.0" layoutY="-8.0" prefHeight="474.0" prefWidth="582.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Comprar">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton layoutX="430.0" layoutY="390.0" ripplerFill="BLACK" text="Añadir al carrito" />
+                        <ListView layoutX="321.0" layoutY="51.0" prefHeight="324.0" prefWidth="239.0" />
+                        <Label layoutX="324.0" layoutY="14.0" text="Carrito de la compra">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="Tabla_productos" layoutX="36.0" layoutY="113.0" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Ventas" />
+            <Tab text="Stock" />
+            <Tab text="Clientes" />
+            <Tab text="Fabricantes" />
+            <Tab text="Devoluciones" />
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

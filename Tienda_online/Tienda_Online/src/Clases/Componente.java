@@ -1,3 +1,4 @@
+package Clases;
 /**
  * Componente
  */
@@ -10,7 +11,7 @@ public class Componente {
 
     public Componente(){}
 
-    public Componente(Fabricante fabricante,int Codigo_producto, String Descripcion, double PVP){
+    public Componente(int Codigo_producto,Fabricante fabricante, String Descripcion, double PVP){
         setFabricante(fabricante);
         setCodigo_producto(Codigo_producto);
         setDescripcion(Descripcion);

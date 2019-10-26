@@ -43,4 +43,9 @@ public class Fabricante {
     public String toString(){
         return Nombre_Fabricante + " [" + Codigo_Fabricante + "] ";
     }
+
+
+    // public boolean equal(Fabricante F){
+    //     return this.Codigo_Fabricante == F.getCodigo_Fabricante() && this.Nombre_Fabricante == F.getNombre_Fabricante();
+    // }
 }

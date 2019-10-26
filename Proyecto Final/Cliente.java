@@ -53,5 +53,9 @@ public class Cliente{
     public String toString(){
         return "Cliente [Codigo]: " + Nombre + " " + Apellido + " [" + Codigo_Cliente + "]";
     }
-    
+     
+   public String toFile(){
+    return "Cliente, " +  getCodigo_Cliente() + ", " + getNombre() + ", " + getApellido() + ", " + getTarjeta_Bancaria();
+
+}
 }
