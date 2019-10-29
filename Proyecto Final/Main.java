@@ -1,185 +1,87 @@
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Date;
-/**
- * main
- */
-public class Main {
+import java.util.*;
 
-    public static String ruta = "C:/Users/Alex/OneDrive/UPC - INGENIERIA/Alex/4º/Introduccion a la POO/POO-UPC/Proyecto Final/";
-    public static String nombre_DB = "Inventario.txt";
-    // Etapa 1
-    /*
-    static void print(Object a){
-        System.out.println(a);
-    }
-    static void conexionFichero(){
-    }
-    static Carrito ejemploCarrito(){
-        
-       Fabricante F = new Fabricante(0, "Samgung", 935628130);
-       Cliente C = new Cliente(0,"Alex","Caceres","4785 4455 6684 4566");
-       ArrayList<Componente> Productos = new ArrayList<Componente>();
 
-       Productos.add();
-       Productos.add(new Componente(F,1,"Teclado Motospeed",80));
-       Productos.add(new Componente(F,2,"NVIDIA GeForce GTX 2060",750));
-       Productos.add(new Componente(F,3,"Memoria RAM Corsair 8GB",40));
-       Productos.add(new Componente(F,4,"Raton inalambrico Razer",50));
-       Productos.add(new Componente(F,5,"Cooler Razer CPU",60));
-       Productos.add(new Componente(F,6,"Intel i7 9124 3.2GHz",350));
-       Productos.add(new Componente(F,7,"Placa Base Asus G2345",120));
-       Productos.add(new Componente(F,8,"Fuente de alimentación Corsair 750W",70));
-       Productos.add(new Componente(F,9,"Tarjeta Wi-Fi StA",20)); 
 
-       Carrito Carro = new Carrito(, new Date(), C);
-       return Carro;
-    }
-    static void etapa1(){
-        print("\n\n\n\n");
-        Carrito Carro = new Carrito();
-        Carro = ejemploCarrito();
-        print("Carrito:    " + new Date());
-        print(Carro);
-        print("Carrito: Eliminados productos 2,3,4,5    " + new Date());
-        print(Carro.eliminarProducto(2));
-        print(Carro.eliminarProducto(3));
-        print(Carro.eliminarProducto(4));
-        print(Carro.eliminarProducto(5));
-        print(Carro);
-        print("Carrito: Intentando eliminar producto 5 (que no se encuentra en el carrito)");
-        print(Carro.eliminarProducto(5));
-        print(Carro);
-        print("Realizada Venta");
-        Venta venta = new Venta();
-        venta = Carro.comprar(new Date(),"Tarjeta de credito");
-        print(venta);
-    }
-    */
-    
+
+public class main {
+
     public static void main(String[] args) {
-
-        File test = new File( ruta + nombre_DB );
-        Archivo archivo = new Archivo(test);
-        String texto[];
-        boolean deleted = false;
-
-
-
-
-
-        Fabricante obj_fabricante = new Fabricante(2,"VictorFab",151235);
-        boolean temp = archivo.add_DB(obj_fabricante);
-        System.out.println(temp);
-        // Componente obj_Componente = new Componente(21, obj_fabricante, 100, "Auriculares Sony", 79.0 );
-        // temp = archivo.add_DB(obj_Componente);
-
-        // Cliente obj_Cliente = new Cliente(2,"Noelia", "Gamez", "1325 1234 1234 1234");
-        // temp = archivo.add_DB(obj_Cliente);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+        ArrayList<Cliente> lista_Clientes = new ArrayList<Cliente>();
+        ArrayList<Fabricante> lista_Fabricante = new ArrayList<Fabricante>();
+        ArrayList<Componente> lista_Componentes = new ArrayList<Componente>();
+        ArrayList<ProductoEnStock> lista_Stock = new ArrayList<ProductoEnStock>();
+        ArrayList<Carrito> lista_Carritos = new ArrayList<Carrito>();
+        ArrayList<Venta> lista_ventas = new ArrayList<Venta>();
+
+        // 1.- Creo nueva tienda online.
+
+        Tienda_online tienda = new Tienda_online(lista_Clientes, lista_Fabricante, lista_Stock, lista_Carritos, lista_ventas);
+
+        // 2.- Creo varios clientes y fabricantes y los añado a la tienda online
 
        
-        // texto = archivo.read_DB(archivo.FABRICANTE, 0);
-        // System.out.println("El fabricante numero 0 es : " + texto[1] );
-        
-        // texto = archivo.read_DB(archivo.FABRICANTE, 1);
-        // System.out.println("El fabricante numero 1 es : " + texto[1] );
-        
-        // texto = archivo.read_DB(archivo.FABRICANTE, 2);
-        // System.out.println("(peta)El fabricante numero 2 es : " + texto[1] );
-
-        // texto = archivo.read_DB(archivo.PRODUCTO, 0);
-        // System.out.println("El PRODUCTO numero 0 es : " + texto[3] );
-
-        // texto = archivo.read_DB(archivo.PRODUCTO, 1);
-        // System.out.println("El PRODUCTO numero 1 es : " + texto[3] );
-        
-        // texto = archivo.read_DB(archivo.PRODUCTO, 2);
-        // System.out.println("El PRODUCTO numero 2 es : " + texto[3] );
-
-
-
-
-        // texto = archivo.read_DB(archivo.CLIENTE, 0);
-        // System.out.println("El CLIENTE numero 0 es : " + texto[1] );
-
-        // texto = archivo.read_DB(archivo.CLIENTE, 1);
-        // System.out.println("El CLIENTE numero 1 es : " + texto[1] );
-        
-        // texto = archivo.read_DB(archivo.CLIENTE, 2);
-        // System.out.println("(peta)El CLIENTE numero 2 es : " + texto[1] );
-        
-        
-        //texto = archivo.read_DB(archivo.COMPONENTE, 2);
-        //System.out.println("El Producto numero 0 es : " + texto[3] );
-        
-        //deleted = archivo.delete_DB(archivo.COMPONENTE, 2);
-        //System.out.println("Se ha eliminado?" + deleted);
-
+        System.out.println(tienda.addFabricante(new Fabricante(0, "Samsung", 935102156)));
+        System.out.println(tienda.addFabricante(new Fabricante(0, "Samsung", 935102156)));
+        System.out.println(tienda.addFabricante(new Fabricante(1, "Intel", 951753825)));
+        System.out.println(tienda.addFabricante(new Fabricante(2, "Corsair", 945456852)));
+        System.out.println(tienda.addFabricante(new Fabricante(3, "AMD", 985753654)));
+        System.out.println(tienda.addFabricante(new Fabricante(4, "Razer", 952123456)));
+       
 
         
+        System.out.println(tienda.addCliente(new Cliente(0, "Alex", "Caceres", "1234 4658 1235 4568")));
+        System.out.println(tienda.addCliente(new Cliente(0, "Alex", "Caceres", "1234 4658 1235 4568")));
+        System.out.println(tienda.addCliente(new Cliente(1, "Daniel", "Caceres", "1234 4658 1235 4568")));
+        System.out.println(tienda.addCliente(new Cliente(2, "Jordi", "Navarro", "1234 4658 1235 4568")));
+        System.out.println(tienda.addCliente(new Cliente(3, "Noelia", "Gámez", "1234 4658 1235 4568")));
+        System.out.println(tienda.addCliente(new Cliente(4, "Roberto", "Garcia", "1234 4658 1235 4568")));
+        
+        
+        // // 3.- Creo varios componentes y sus correspondientes productosenStock y los añado a la tienda.
 
-        //System.out.println("Se ha creado?" + temp);
+        
+        // new Componente(0, lista_Fabricante.get(0), "Monitor 29'", 200);
+        // new Componente(1, lista_Fabricante.get(2), "Teclado mecanico", 80);
+        // new Componente(2, lista_Fabricante.get(3), "Procesador A10 3.2GHz", 150);
+        // new Componente(3, lista_Fabricante.get(3), "Ryzen 4.2GHz", 350);
+        // new Componente(4, lista_Fabricante.get(4), "Mouse optico", 50);
+        // new Componente(5, lista_Fabricante.get(1), "Procesador i9 serie 9012", 500);
+
+        
+        // new ProductoEnStock(lista_Componentes.get(0), 20, 0);
+        // new ProductoEnStock(lista_Componentes.get(1), 12, 0);
+        // new ProductoEnStock(lista_Componentes.get(2), 5, 0);
+        // new ProductoEnStock(lista_Componentes.get(3), 2, 0);
+        // new ProductoEnStock(lista_Componentes.get(4), 15, 0);
+        // new ProductoEnStock(lista_Componentes.get(5), 6, 0);
+
+        // // 4.- Añado productos en stock en la tienda virtual
+
+        // tienda.setLista_Stock(lista_Stock);
+
+        // // 5.- Creo un carrito de la compra añadiendo ciertos productos y lo añado a la tienda
+
+        
+        // ArrayList<Componente> lista_productos = new ArrayList<Componente>();
+        // lista_Componentes.get(5);
+        // lista_Componentes.get(1);
+        // lista_Componentes.get(3);
+        // lista_Componentes.get(3);
+        // lista_Componentes.get(3);
+        // lista_Componentes.get(3);
+        // lista_Componentes.get(0);
+        // lista_Carritos.add(new Carrito(lista_productos, new Date(), lista_Clientes.get(0)));
+
+        // String p = tienda.setLista_Carritos(lista_Carritos);
+        // System.out.println(p);
+
+        // // 6.-
+
         
 
-        //texto = archivo.read_DB(archivo.COMPONENTE, 2);
-        //System.out.println("El Producto numero 0 es : " + texto[3] );
+
+        
 
 
 
@@ -187,7 +89,26 @@ public class Main {
 
 
 
-        //etapa1();
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

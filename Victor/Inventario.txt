@@ -1,0 +1,16 @@
+Fabricante, 0, Samgung, 935628130
+Fabricante, 2, VictorFab, 151235
+Fabricante, 1, Kingston, 901605203
+
+Cliente, 0, Alex, Caceres, 4785 4455 6684 4566
+Cliente, 1, Victor,Caceres, 4785 4455 6684 4566
+
+Componente, 0, 0, 54, Tarjeta Wi-Fi StA, 20
+Componente, 1, 0, 54, Teclado Motospeed, 80
+Componente, 2, 1, 54, NVIDIA GeForce GTX 2060, 750
+Componente, 3, 0, 54, Memoria RAM Corsair 8GB, 40
+Componente, 4, 0, 54, Raton inalambrico Razer, 50
+Componente, 5, 1, 54, Cooler Razer CPU, 60
+Componente, 6, 1, 54, Intel i7 9124 3.2GHz, 350
+Componente, 7, 1, 54, Placa Base Asus G2345, 120
+Componente, 8, 1, 54, Fuente de alimentación Corsair 750W, 70

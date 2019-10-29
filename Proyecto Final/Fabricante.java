@@ -48,4 +48,10 @@ public class Fabricante {
    public String toFile(){
        return "Fabricante, " + getCodigo_Fabricante() + ", " + getNombre_Fabricante() + ", " + getTelefono_Fabricante(); 
    }
+
+   
+   public boolean equals(Fabricante f){
+        if(Codigo_Fabricante == f.getCodigo_Fabricante()) return false;
+        return false;
+   }
 }

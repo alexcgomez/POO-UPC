@@ -7,14 +7,13 @@ public class Componente {
     private int Codigo_producto;
     private String Descripcion;
     private double PVP;
-    private int stock;
+
 
     public Componente(){}
 
-    public Componente(int Codigo_producto,Fabricante fabricante, int stock, String Descripcion, double PVP){
+    public Componente(int Codigo_producto,Fabricante fabricante, String Descripcion, double PVP){
         setFabricante(fabricante);
         setCodigo_producto(Codigo_producto);
-        setStock(stock);
         setDescripcion(Descripcion);
         setPVP(PVP);
     }
@@ -58,15 +57,7 @@ public class Componente {
 
     
    public String toFile(){
-        return "Componente, " +  getCodigo_producto() + ", " + getFabricante() + ", " + getStock() + ", " + getDescripcion() + ", " + getPVP();
+        return "Componente, " +  getCodigo_producto() + ", " + getFabricante() + ", " + ", " + getDescripcion() + ", " + getPVP();
 
-    }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
     }
 }
