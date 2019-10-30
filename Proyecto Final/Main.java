@@ -53,10 +53,10 @@ public class main {
 
         println("\n/////////// AÑADO PRODUCTOS AL INVENTARIO //////////\n");
         println(tienda.updateStock(new Componente(0, lista_Fabricante.get(0), "Monitor 29'", 200), 3)); 
-        println(tienda.updateStock(new Componente(1, lista_Fabricante.get(2), "Teclado mecanico", 80), 10));
+        println(tienda.updateStock(new Componente(1, lista_Fabricante.get(2), "Caja de ordenador Matrix", 80), 10));
         println(tienda.updateStock(new Componente(2, lista_Fabricante.get(3), "Procesador A10 3.2GHz", 150), 1));
         println(tienda.updateStock(new Componente(3, lista_Fabricante.get(3), "Ryzen 4.2GHz", 350), 3));
-        println(tienda.updateStock(new Componente(4, lista_Fabricante.get(4), "Mouse optico", 50), 5));
+        println(tienda.updateStock(new Componente(4, lista_Fabricante.get(4), "Altavoces 7.1", 50), 5));
         println(tienda.updateStock(new Componente(5, lista_Fabricante.get(1), "Procesador i9 serie 9012", 500), 2));
         println("\n----> Intento añadir Producto ya en stock (Procesador i9 serie 9012): \n");
         println(tienda.updateStock(new Componente(5, lista_Fabricante.get(1), "Procesador i9 serie 9012", 500), 2));
@@ -99,21 +99,28 @@ public class main {
         println("\n/////////// ELIMINO UN CARRITO DETERMINADO //////////\n");
         println(tienda.deleteCarrito(tienda.getLista_Carritos().get(0).getCliente()));
        
-        /*
 
-        POR FALTA DE TIEMPO, NO HE PODIDO TERMINAR TODAS LAS FUNCIONALIDADES
-        FALTARÍA, LA PARTE DE HERENCIA Y POLIMORFISMO Y ARREGLAR CIERTOS ERRORES
-        EN LA GESTIÓN DEL STOCK DE LA TIENDA, SE HA INTENTADO REALIZAR EL PROYECTO
-        MEDIANTE UNA PEQUEÑA BASE DE DATOS GESTIONADA POR UN FICHERO .TXT EN EL QUE 
-        SE PODIAN INTRODUCIR LOS DATOS DESDE FUERA DEL PROGRAMA PARA UNA GESTIÓN DE 
-        LA TIENDA MAS VISUAL, PERO FINALMENTE, DECIDÍ COMENZAR EL PROYECTO DE NUEVO
-        DE AHI LA FALTA DE TIEMPO. ADJUNTO DE TODOS MODOS PARTE DEL CODIGO QUE DISEÑE
-        PARA LA BASE DE DATOS
+        // 8.- Añado productos en herencia de clases a la tienda
 
-        */
-    
+        println("\n/////////// AÑADO PRODUCTOS(Herencia) AL INVENTARIO //////////\n");
 
+        println("Añado memoria tipo FLASH");
+        println(tienda.updateStock(new Flash(6, tienda.getLista_Fabricante().get(0), "Memoria Flash 3GB", 15.0, 3, 20.0),10));     
+        println("Añado memoria tipo RAM");
+        println(tienda.updateStock(new RAM(7, tienda.getLista_Fabricante().get(1), "Memoria RAM 4GB", 40, 4, "DDR3"),10)); 
+        println("Añado memoria tipo Disco Duro");
+        println(tienda.updateStock(new DiscoDuro(8, tienda.getLista_Fabricante().get(0), "SSD 400GB", 140, 400, "Externo"),10)); 
+        println("Añado Placa Base");
+        println(tienda.updateStock(new PlacaBase(9, tienda.getLista_Fabricante().get(4), "Placa base Asus", 240, "Socket A3", 120, 240, "DDR5"),10)); 
+        println("Añado Periferico tipo Teclado");
+        println(tienda.updateStock(new Teclados(10, tienda.getLista_Fabricante().get(1), "Teclado mecanico", 140, "USB","es-ES"),10)); 
+        println("Añado Periferico tipo Raton");
+        println(tienda.updateStock(new Ratones(11, tienda.getLista_Fabricante().get(4), "Raton optico Razer", 40, "USB", 4),10)); 
+        println("Añado Periferico tipo Impresora");
+        println(tienda.updateStock(new Impresoras(12, tienda.getLista_Fabricante().get(4), "Memoria RAM 4GB", 40,"USB","Laser"),10)); 
 
+        println("\n/////////// MUESTRO PRODUCTOS DISPONIBLES EN STOCK //////////\n");
+        println(tienda.mostrarStock());
 
         
 
