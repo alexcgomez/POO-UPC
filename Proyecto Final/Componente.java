@@ -60,4 +60,13 @@ public class Componente {
         return "Componente, " +  getCodigo_producto() + ", " + getFabricante() + ", " + ", " + getDescripcion() + ", " + getPVP();
 
     }
+
+    @Override
+    public boolean equals(Object f){
+         boolean Same = false;
+         if (f != null && f instanceof Componente){
+             Same = this.Codigo_producto == ((Componente) f).Codigo_producto;
+         }
+         return Same;
+     }
 }

@@ -74,7 +74,7 @@ public class Carrito {
     @Override
     public String toString(){
         double total=0.0;
-        String texto = "\n\nCARRITO DE LA COMPRA\n______________________\n";           
+        String texto = "\n\nCARRITO DE LA COMPRA DE "+ cliente.getNombre() + " " + cliente.getApellido() +  "\n__________________________________\n";           
         texto += "\nFabricante[Cod.Fab.] | Codigo de producto | Descripcion | Precio";
         texto += "\n";
             if(Lista_productos != null){

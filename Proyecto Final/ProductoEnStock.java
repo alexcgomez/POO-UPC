@@ -36,4 +36,11 @@ public class ProductoEnStock {
     public void addReservados() {
         this.reservados++;
     }
+
+    @Override
+    public String toString(){
+        return "Producto: " + producto.getDescripcion() + "\n" + 
+                "Unidades en stock: " + Stock + "\n" +
+                "Unidades reservadas: " + reservados;
+    }
 }

@@ -57,5 +57,14 @@ public class Cliente{
    public String toFile(){
     return "Cliente, " +  getCodigo_Cliente() + ", " + getNombre() + ", " + getApellido() + ", " + getTarjeta_Bancaria();
 
-}
+    }
+
+    @Override
+    public boolean equals(Object f){
+         boolean Same = false;
+         if (f != null && f instanceof Cliente){
+             Same = this.Codigo_Cliente == ((Cliente) f).Codigo_Cliente;
+         }
+         return Same;
+     }
 }

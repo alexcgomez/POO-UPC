@@ -41,7 +41,7 @@ public class Fabricante {
 
     @Override
     public String toString(){
-        return Nombre_Fabricante + " [" + Codigo_Fabricante + "] ";
+        return "Fabricante [Codigo]: " + Nombre_Fabricante + " [" + Codigo_Fabricante + "] ";
     }
 
 
@@ -49,9 +49,12 @@ public class Fabricante {
        return "Fabricante, " + getCodigo_Fabricante() + ", " + getNombre_Fabricante() + ", " + getTelefono_Fabricante(); 
    }
 
-   
-   public boolean equals(Fabricante f){
-        if(Codigo_Fabricante == f.getCodigo_Fabricante()) return false;
-        return false;
-   }
+   @Override
+   public boolean equals(Object f){
+        boolean Same = false;
+        if (f != null && f instanceof Fabricante){
+            Same = this.Codigo_Fabricante == ((Fabricante) f).Codigo_Fabricante;
+        }
+        return Same;
+    }
 }

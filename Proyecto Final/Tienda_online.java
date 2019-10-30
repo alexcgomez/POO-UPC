@@ -1,5 +1,7 @@
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 
 /**
  * Tienda_online
@@ -24,31 +26,133 @@ public class Tienda_online implements GestionTienda{
     }
 
     public String addCliente(Cliente c){
-        String retorno = "Cliente " + c.getNombre() + " " + c.getApellido() + " añadido correctamente !";
-        if(lista_Clientes.contains(c)) retorno = "El cliente " + c.getNombre() + " " + c.getApellido() + " ya existe!";
-        return retorno;
+        if(lista_Clientes.contains(c)) return "El cliente " + c.getNombre() + " " + c.getApellido() + " ya existe!";
+        lista_Clientes.add(c);
+        return "Cliente " + c.getNombre() + " " + c.getApellido() + " añadido correctamente !";
     }
     public String addFabricante(Fabricante f){
-        String retorno = "Fabricante " + f.getNombre_Fabricante() + " añadido correctamente !";
-        for (int i = 0; i < lista_Fabricante.size(); i++) {
-            System.out.println("entro en el for");
-            if(lista_Fabricante.contains(f)){retorno = "El fabricante " + f.getNombre_Fabricante() + " ya existe!";}
-        }
+        if(lista_Fabricante.contains(f))return  "El fabricante " + f.getNombre_Fabricante() + " ya existe!";
         lista_Fabricante.add(f);
+        return "Fabricante " + f.getNombre_Fabricante() + " añadido correctamente !";
+    }
+    public String showCliente(){
+        Iterator<Cliente> it = lista_Clientes.iterator();
+        String retorno = "";
+        while(it.hasNext()){
+			retorno += "\n" + it.next();
+        }
         return retorno;
     }
-    public void showCliente(){}
-    public void showFabricante(){}
-    public void updateStock(Componente c, int u){}
-    public void addComponente(){}
-    public void addCarrito(Cliente c, Date d){}
-    public void showCarrito(){}
-    public void showVentas(){}
-    public void deleteCarrito(Cliente c){}
-    public void deleteVenta(Date d){}
-    public void comprarCarrito(int i, String p){}
-    public void devolucion(Date d, Cliente c, int cd){}
-    public void mostrarStock(){}
+    public String showFabricante(){
+        Iterator<Fabricante> it = lista_Fabricante.iterator();
+        String retorno = "";
+        while(it.hasNext()){
+			retorno += "\n" + it.next();
+        }
+        return retorno;
+    }
+    public String updateStock(Componente c, int u){
+        for (int i = 0; i < lista_Stock.size(); i++) {
+            if(lista_Stock.get(i).getProducto().equals(c)){
+            lista_Stock.get(i).setStock(u);
+            return "Producto " + c.getDescripcion() + " hallado en inventario, sumadas/restadas " + u + " unidades del stock";}
+        }
+        lista_Stock.add(new ProductoEnStock(c,u,0));
+        return "Producto " + c.getDescripcion() + " añadido al inventario con " + u + " unidades en stock."; 
+    }
+    public String addProdCarrito(Carrito c, Componente p){
+
+        String retorno = "";
+        // Antes de añadir paso el control del producto en stock
+        for (int i = 0; i < lista_Stock.size(); i++) {
+            if(lista_Stock.get(i).getProducto().equals(p)){
+                if (lista_Stock.get(i).getStock() > lista_Stock.get(i).getReservados()){
+                    lista_Stock.get(i).addReservados();
+                    c.añadirProducto(p);
+                    retorno = "Añadido " + lista_Stock.get(i).getProducto().getDescripcion() +" a carrito de " + c.getCliente().getNombre() + " " + c.getCliente().getApellido();
+                }
+                else retorno =  "No hay unidades disponibles de: " + lista_Stock.get(i).getProducto().getDescripcion();
+            }
+        }
+        return retorno;
+    }
+    public String addCarrito(Cliente c, Date d){
+        
+        for (int i = 0; i < lista_Carritos.size(); i++) {
+            if(lista_Carritos.get(i).getCliente().equals(c)){
+                return "El cliente " + c.getNombre() + " " + c.getApellido() + " ya tiene un carrito de compra con fecha de: " + lista_Carritos.get(i).getFecha();
+            }
+        }
+        lista_Carritos.add(new Carrito(new ArrayList<Componente>(),d,c));
+        return "Se ha creado carrito de compra a nombre de: " + c.getNombre() + " " + c.getApellido() + " con fecha de " + d;
+    }
+    public String showCarrito(){
+        Iterator<Carrito> it = lista_Carritos.iterator();
+        String retorno = "";
+        while(it.hasNext()){
+			retorno += "\n" + it.next();
+        }
+        return retorno;
+    }
+    public String showVentas(){
+        Iterator<Venta> it = ventas.iterator();
+        String retorno = "";
+        while(it.hasNext()){
+			retorno += "\n" + it.next();
+        }
+        return retorno;
+    }
+    public String deleteCarrito(Cliente c){
+        for (int i = 0; i < lista_Carritos.size(); i++) {
+            if(lista_Carritos.get(i).getCliente().equals(c)){
+                lista_Carritos.remove(i);
+                return "Carrito eliminado del sistema";
+            }
+        }
+        return "No se ha localizado el carrito en el sistema.";
+    }
+    public String deleteVenta(Date d){
+        for (int i = 0; i < ventas.size(); i++) {
+            if(ventas.get(i).getFechaVenta().equals(d)){
+                for (int j = 0; j < ventas.get(i).getLista_productos().size(); j++) {
+                    for (int j2 = 0; j2 < lista_Stock.size(); j2++) {
+                        if(lista_Stock.get(j2).getProducto().equals(ventas.get(i).getLista_productos().get(j)))lista_Stock.get(j2).setStock(+1);
+                    }
+                }
+                ventas.remove(i);
+                return "Devolución completa de la venta";
+            }
+        }
+        return "Venta no hallada en el sistema";
+    }
+    public String comprarCarrito(int i, String p){
+
+        for (int j = 0; j < lista_Carritos.get(i).getLista_productos().size() ;j++) {
+            for (int j2 = 0; j2 < lista_Stock.size(); j2++) {
+                if(lista_Stock.get(j2).getProducto().equals(lista_Carritos.get(i).getLista_productos().get(j))){
+                    lista_Stock.get(j2).setStock(lista_Stock.get(j2).getStock()- lista_Stock.get(j2).getReservados());
+                }
+            }
+        }
+        ventas.add(lista_Carritos.get(i).comprar(new Date(), p));
+        return "Venta de carrito de " + lista_Carritos.get(i).getCliente().getNombre() + " realizada con " + p;
+
+    }
+    public void devolucion(Date d, Cliente c, int cd){
+
+        // for (int i = 0; i < array.length; i++) {
+            
+        // }
+
+    }
+    public String mostrarStock(){
+        Iterator<ProductoEnStock> it = lista_Stock.iterator();
+        String retorno = "";
+        while(it.hasNext()){
+			retorno += "\n" + it.next();
+        }
+        return retorno;
+    }
 
     public ArrayList<Cliente> getLista_Clientes() {
         return lista_Clientes;

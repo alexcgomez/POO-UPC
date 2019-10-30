@@ -77,59 +77,6 @@ public class Main_fichero {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
        
         // texto = archivo.read_DB(archivo.FABRICANTE, 0);
         // System.out.println("El fabricante numero 0 es : " + texto[1] );
